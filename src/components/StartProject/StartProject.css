@@ -1,0 +1,68 @@
+.start-project {
+  /* width: 1400px; */
+  margin: 0 auto;
+  padding: 55px 0 60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.start-project__btn {
+  width: 264px;
+  z-index: 1;
+  height: 264px;
+  background-image: url(../../images/start-proj-btn-back.svg);
+  background-color: rgba(0, 0, 0, 0);
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+  /* identical to box height */
+  
+  text-transform: uppercase;
+  
+  color: #FFFFFF;
+  padding: 0;
+  border: none;
+  outline: none;  
+  margin: 0 auto;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.start-project__btn:hover {
+  opacity: .96;
+}
+
+.start-project__number {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  /* identical to box height, or 48px */
+  
+  text-transform: uppercase;
+  
+  color: #FFFFFF;
+  margin: 58px auto 0;
+}
+
+@media screen and (min-width: 375px) and (max-width: 744px) {
+
+  .start-project__btn {
+    width: 231px;
+    height: 231px;
+    font-size: 20px;
+    line-height: 27px;
+  }
+  
+  .start-project__number {
+    font-size: 28px;
+    margin: 45px auto 0;
+  }
+  
+}

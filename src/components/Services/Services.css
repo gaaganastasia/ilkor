@@ -1,0 +1,388 @@
+.services {
+  width: 1400px;
+  margin: 50px auto 170px;
+  display: flex;
+  flex-direction: column;
+}
+
+.services__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.services__title {
+  font-family: 'Neutral Face';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 150%;
+  /* identical to box height, or 38px */
+  
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  
+  margin: 0;
+  color: #FFFFFF;
+}
+
+.ReactCollapse--collapse {
+  max-width: 1009px;
+  transition: height 1s;
+}
+
+.services__subtitle {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  /* or 48px */
+  
+  
+  color: #FFFFFF;
+  
+  opacity: 0.7;
+  max-width: 1039px;
+  margin: 0;
+}
+
+.services__content {
+  width: 1039px;
+  align-self: flex-end;
+}
+
+.service {
+  padding: 40px 0;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, .3);
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.service__more-btn {
+  background-image: url(../../images/close-icon.svg);
+  background-color: rgba(255, 255, 255, 0);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+  border: none;
+  outline: none;
+  position: absolute;
+  padding: 0;
+  top: 40px;
+  right: 0;
+  transform: rotate(-45deg);
+  transition-property: transform;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+}
+
+.service__close-btn {
+  transform: rotate(0);
+}
+
+.service__title {
+  font-family: 'Neutral Face';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 150%;
+  /* identical to box height, or 60px */
+  
+  letter-spacing: 0.04em;
+  
+  color: #FFFFFF;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.service__description {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 150%;
+  /* or 32px */
+  
+  
+  color: #FFFFFF;
+  
+  opacity: 0.7;
+  margin: 54px 0 50px;
+  max-width: 570px;
+  align-self: flex-end;
+}
+
+.service__stages {
+  width: 1009px;
+  align-self: flex-end;
+  flex-direction: column;
+  display: flex;
+}
+
+.service__stages_visible {
+  display: flex;
+}
+
+.stage {
+  padding: 33px 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, .3);
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
+  position: relative;
+  align-items: center;
+}
+
+.stage__title {
+  font-family: 'Neutral Face';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  /* identical to box height, or 30px */
+  
+  letter-spacing: 0.04em;
+  
+  color: #FFFFFF;
+  
+  opacity: 0.7;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.stage__time {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  /* identical to box height, or 30px */
+  
+  
+  color: #FFFFFF;
+  
+  opacity: 0.6;
+  margin: 0;
+  position: absolute;
+  top: 33px;
+  left: 439px;
+}
+
+.stage__more-btn {
+  width: 20px;
+  height: 20px;
+  background-image: url(../../images/more-btn.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  outline: none;
+  margin-right: 20px;
+  padding: 0;
+}
+
+.service__last {
+  position: relative;
+  height: 193px;
+}
+
+.service___time {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  /* identical to box height, or 30px */
+  
+  
+  color: #FFFFFF;
+  margin: 0;  
+  position: absolute;
+  top: 33px;
+  left: 439px;
+}
+
+.service__order-btn {
+  background-image: url(../../images/order-btn-back.svg);
+  background-color: rgba(255, 255, 255, 0);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 120px;
+  height: 120px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  /* identical to box height, or 24px */
+  
+  
+  color: #FFFFFF;
+  border: none;
+  outline: none;
+  padding: 0;
+  
+  position: absolute;
+  top: 33px;
+  right: 130px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.service__order-btn:hover {
+  opacity: .8;
+}
+
+
+
+
+@media screen and (min-width: 744px) and (max-width: 1599px) {
+  .services {
+    width: 714px;
+    margin: 50px auto 150px;
+  }
+
+  .services__header {
+    flex-direction: column;
+  }
+
+  .services__title {
+    margin-bottom: 30px;
+  }
+
+  .services__subtitle {
+    font-size: 26px;
+    max-width: 714px;
+  }
+
+  .services__content {
+    width: 714px;
+  }
+
+  .service__more-btn {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .service__title {
+    font-size: 32px;
+  }
+  
+  .service__description {
+    margin: 62px 0 50px;
+  }
+  
+  .service__stages {
+    width: 100%;
+  }
+  
+  .stage__more-btn {
+    margin-right: 9px;
+  }
+  
+  .service__last {
+    position: relative;
+    height: 239px;
+  }
+  
+  .service___time {
+    font-size: 20px;
+    top: 30px;
+    left: 439px;
+  }
+  
+  .service__order-btn {
+    font-size: 16px;
+    top: 30px;
+    right: 20px;
+  }
+}
+
+
+@media screen and (min-width: 375px) and (max-width: 744px) {
+  .services {
+    width: 344px;
+    margin: 40px auto 120px;
+  }
+
+  .services__header {
+    flex-direction: column;
+  }
+
+  .services__title {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .services__subtitle {
+    font-size: 24px;
+    max-width: 714px;
+  }
+
+  .services__content {
+    width: 344px;
+  }
+
+  .service {
+    padding: 30px 0;
+  }
+
+  .service__more-btn {
+    top: 30px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .service__title {
+    font-size: 24px;
+  }
+
+  .service__description {
+    font-size: 16px;
+    margin: 30px 0 50px;
+    max-width: 344px;
+  }
+
+  .service__stages {
+    width: 100%;
+  }
+
+  .stage {
+    padding: 25px 0;
+  }
+  
+  .stage__title {
+    font-size: 16px;
+  }
+  
+  .stage__time {
+    display: none;
+  }
+
+  .stage__more-btn {
+    margin-right: 0;
+  }
+
+  .service__last {
+    height: 155px;
+  }
+  
+  .service___time {
+    top: 45px;
+    left: 104px;
+  }
+  
+  .service__order-btn {
+    width: 100px;
+    height: 100px;
+    top: 25px;
+    right: 22px;
+  }
+}
