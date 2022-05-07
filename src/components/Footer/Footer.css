@@ -56,8 +56,14 @@
   opacity: .8;
 }
 
+@media screen and (min-width: 1279px) and (max-width: 1599px) {
+  .footer {
+    width: 1180px;
+  }
+}
 
-@media screen and (min-width: 744px) and (max-width: 1599px) {
+
+@media screen and (min-width: 744px) and (max-width: 1279px) {
   .footer {
     width: 714px;
     padding: 100px 0 162px;

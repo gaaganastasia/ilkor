@@ -5,7 +5,13 @@
   margin: 0 auto;
 }
 
-@media screen and (min-width: 744px) and (max-width: 1599px) {
+@media screen and (min-width: 1279px) and (max-width: 1599px) {
+  .line {
+    width: 1180px;
+  }
+}
+
+@media screen and (min-width: 744px) and (max-width: 1279px) {
   .line {
     width: 714px;
   }

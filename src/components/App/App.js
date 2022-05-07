@@ -10,8 +10,10 @@ import StartProject from "../StartProject/StartProject";
 import Footer from "../Footer/Footer";
 import Navigation from "../Navigation/Navigation";
 import Form from "../Form/Form";
+import Fade from 'react-reveal/Fade';
 
 function App() {
+
   const [isNavOpen, setNavState] = React.useState(false);
   const changeNavState = () => {
   setNavState(!isNavOpen);
@@ -55,22 +57,36 @@ function App() {
         <Main changeFormState={changeFormState}></Main>
       </div>
       <Line></Line>
-      <AboutUs></AboutUs>
-      <Line></Line>
-      <Projects></Projects>
-      <Line></Line>
-      <Services
-        isDevOpen={isDevOpen}
-        changeDevState={changeDevState}
-        isLayoutOpen={isLayoutOpen}
-        changeLayoutState={changeLayoutState}
-        isDesignOpen={isDesignOpen}
-        changeDesignState={changeDesignState}
-        isAdOpen={isAdOpen}
-        changeAdState={changeAdState}></Services>
-      <Line></Line>
-      <StartProject></StartProject>
-      <Line></Line>
+      <Fade bottom>
+        <AboutUs></AboutUs>
+      </Fade>
+
+      <Fade bottom>
+        <Line></Line>
+        <Projects></Projects>
+      </Fade>
+
+      <Fade bottom>
+        <Line></Line>
+        <Services
+          isDevOpen={isDevOpen}
+          changeDevState={changeDevState}
+          isLayoutOpen={isLayoutOpen}
+          changeLayoutState={changeLayoutState}
+          isDesignOpen={isDesignOpen}
+          changeDesignState={changeDesignState}
+          isAdOpen={isAdOpen}
+          changeAdState={changeAdState}>
+        </Services>
+      </Fade>
+
+      <Fade bottom>
+        <Line></Line>
+        <StartProject changeFormState={changeFormState}></StartProject>
+        <Line></Line>
+      </Fade>
+      
+      
       <Footer></Footer>
       <Navigation
         isOpen={isNavOpen}

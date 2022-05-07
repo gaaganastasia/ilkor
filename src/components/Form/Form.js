@@ -1,29 +1,88 @@
 import React from "react";
 import "./Form.css";
+import emailjs from '@emailjs/browser';
+import emailkey from '../../utils/emailkey';
+
 
 function Form(props) {
+
+  const [name, setName] = React.useState("");
+
+  function handleChangeName(e) {
+    setName(e.target.value);
+  }
+
+  const [phone, setPhone] = React.useState("");
+
+  function handleChangePhone(e) {
+    setPhone(e.target.value);
+  }
+
+  const [email, setEmail] = React.useState("");
+
+  function handleChangeEmail(e) {
+    setEmail(e.target.value);
+  }
+
+  const [task, setTask] = React.useState("");
+
+  function handleChangeTask(e) {
+    setTask(e.target.value);
+  }
+
+  const resetValues = () => {
+    setName('');
+    setPhone('');
+    setEmail('');
+    setTask('');
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevents default refresh by the browser
+
+    emailjs.send(emailkey.SERVICE_ID, emailkey.TEMPLATE_ID, {name: name,
+      phone: phone,
+      email: email,
+      task: task,}, emailkey.PUBLIC_KEY)
+       .then((result) => {
+         console.log("Message Sent, We will get back to you shortly", result.text);
+         resetForm(e);
+         props.changeCheckboxState();
+       }, (error) => {
+         console.log("An error occurred, Please try again", error.text);
+       });
+  };
+
+  const resetForm = (e) => {
+    props.changeState();
+    e.target.reset();
+    resetValues();
+  } 
+
   return (
     <div className={`form ${props.isOpen ? `form_opened` : ``}`}>
       <div className="form__overlay"></div>
-      <div className="form__container">
-        <div className="form__header">
-          <p className="form__title">Начать проект</p>
-          <button
-            className="form__close-btn"
-            type="reset"
-            onClick={props.changeState}
-          ></button>
-        </div>
+      <div className="form__layer">
+        <div className="form__container">
+          <div className="form__header">
+            <p className="form__title">Начать проект</p>
+            <button
+              className="form__close-btn"
+              type="reset"
+              onClick={resetForm}
 
-        <form
-          method="post"
-          action="index.html"
-          name="sign-up"
-          className="form__form"
-          noValidate
-          autocomplete="off"
-        >
-          <label className="form__field" htmlFor="name">
+            ></button>
+          </div>
+
+          <form
+            method="post"
+            action="index.html"
+            name="application"
+            className="form__form"
+            noValidate
+            autocomplete="off"
+            onSubmit={handleSubmit}
+          >
             <input
               name="name"
               type="text"
@@ -32,10 +91,9 @@ function Form(props) {
               placeholder='ФИО'
               className="form__input form__input-name"
               required
+              onChange={handleChangeName}
             ></input>
-            <span></span>
-          </label>
-          <label className="form__field" htmlFor="phone">
+              
             <input
               name="phone"
               type="text"
@@ -44,126 +102,33 @@ function Form(props) {
               minLength="2"
               className="form__input form__input-phone"
               required
+              onChange={handleChangePhone}
             ></input>
-            <span></span>
-          </label>
-          <label className="form__field" htmlFor="mail">
-          <input
-              name="mail"
-              type="text"
-              minLength="2"
-              id="mail"
-              placeholder='Почта'
-              className="form__input form__input-mail"
-              required
-            ></input>
-            <span></span>
-          </label>
-          <label className="form__field" htmlFor="description">
-          <input
-              name="description"
-              type="text"
-              minLength="2"
-              id="description"
-              placeholder='Описание задачи'
-              className="form__input form__input-description"
-              required
-            ></input>
-            <span></span>
-          </label>
 
-          <span></span>
-          
-          <div className="form__checkbox checkbox">
-            <label className={`checkbox__label ${props.isCheckboxActive ? `checkbox__label_active` : ``}`} onClick={props.changeCheckboxState}>
-              <input
-                type="checkbox"
-                className="checkbox__container"
-              ></input>
-            </label>
-            <p className="checkbox__text">Я даю согласие на обработку персональных данных</p>
-          </div>
-          
-          <button
-            type="submit"
-            className={`form__submit ${props.isCheckboxActive ? `form__submit_active` : ``}`}
-          >
-            Отправить заявку
-          </button>
-        </form>
-        
-
-
-        {/* <div className="form">
-          <p className="form__text">Начать проект</p>
-          <button
-            className="nav__close-btn"
-            type="reset"
-            onClick={props.changeState}
-          ></button>
-          <form
-            method="post"
-            action="index.html"
-            name="sign-up"
-            className="form__container"
-            noValidate
-            autocomplete="off"
-          >
-            <label className="form__field" htmlFor="name">
-              <input
-                name="name"
+            <input
+                name="email"
                 type="text"
                 minLength="2"
-                id="name"
-                placeholder='ФИО'
-                className="form__input form__input-name"
-                required
-              ></input>
-              <span></span>
-            </label>
-            <label className="form__field" htmlFor="phone">
-              <input
-                name="phone"
-                type="text"
-                id="phone"
-                placeholder='Телефон'
-                minLength="2"
-                className="form__input form__input-phone"
-                required
-              ></input>
-              <span></span>
-            </label>
-            <label className="form__field" htmlFor="mail">
-              <textarea 
-                name="mail"
-                type="text"
-                id="mail"
+                id="email"
                 placeholder='Почта'
-                className="form__input form__input-mail"
+                className="form__input form__input-email"
                 required
-              ></textarea >
-              <span></span>
-            </label>
-            <label className="form__field" htmlFor="description">
-              <textarea 
-                name="description"
+                onChange={handleChangeEmail}
+              ></input>
+
+              <input
+                name="task"
                 type="text"
-                id="description"
+                minLength="2"
+                id="task"
                 placeholder='Описание задачи'
-                className="form__input form__input-description"
+                className="form__input form__input-task"
                 required
-              ></textarea >
-              <span></span>
-            </label>
+                onChange={handleChangeTask}
+              ></input>
 
             <span></span>
-            <button
-              type="submit"
-              className="form__submit"
-            >
-            Отправить заявку
-            </button>
-
+            
             <div className="form__checkbox checkbox">
               <label className={`checkbox__label ${props.isCheckboxActive ? `checkbox__label_active` : ``}`} onClick={props.changeCheckboxState}>
                 <input
@@ -173,95 +138,19 @@ function Form(props) {
               </label>
               <p className="checkbox__text">Я даю согласие на обработку персональных данных</p>
             </div>
+            
+            <button
+              type="submit"
+              className={`form__submit ${(props.isCheckboxActive && name && phone && email && task) ? `form__submit_active` : ``}`}
+              disabled={!props.isCheckboxActive || !name || !phone || !email || !task}
+            >
+              Отправить заявку
+            </button>
           </form>
-        </div> */}
+        </div>
       </div>
+      
     </div>
-
-
-
-
-    // <div className="form">
-    //   <p className="form__text">Начать проект</p>
-    //   <button
-    //       className="nav__close-btn"
-    //       type="reset"
-    //       onClick={props.changeState}
-    //     ></button>
-    // <form
-    //     method="post"
-    //     action="index.html"
-    //     name="sign-up"
-    //     className="form__container"
-    //     noValidate
-    //     autocomplete="off"
-    //   >
-    //     <label className="form__field" htmlFor="name">
-    //       <input
-    //         name="name"
-    //         type="text"
-    //         minLength="2"
-    //         id="name"
-    //         placeholder='ФИО'
-    //         className="form__input form__input-name"
-    //         required
-    //       ></input>
-    //       <span></span>
-    //     </label>
-    //     <label className="form__field" htmlFor="phone">
-    //       <input
-    //         name="phone"
-    //         type="text"
-    //         id="phone"
-    //         placeholder='Телефон'
-    //         minLength="2"
-    //         className="form__input form__input-phone"
-    //         required
-    //       ></input>
-    //       <span></span>
-    //     </label>
-    //     <label className="form__field" htmlFor="mail">
-    //       <textarea 
-    //         name="mail"
-    //         type="text"
-    //         id="mail"
-    //         placeholder='Почта'
-    //         className="form__input form__input-mail"
-    //         required
-    //       ></textarea >
-    //       <span></span>
-    //     </label>
-    //     <label className="form__field" htmlFor="description">
-    //       <textarea 
-    //         name="description"
-    //         type="text"
-    //         id="description"
-    //         placeholder='Описание задачи'
-    //         className="form__input form__input-description"
-    //         required
-    //       ></textarea >
-    //       <span></span>
-    //     </label>
-
-    //     <span></span>
-    //     <button
-    //       type="submit"
-    //       className="form__submit"
-    //     >
-    //     Отправить заявку
-    //     </button>
-
-    //     <div className="form__checkbox checkbox">
-    //       <label className={`checkbox__label ${props.isCheckboxActive ? `checkbox__label_active` : ``}`} onClick={props.changeCheckboxState}>
-    //         <input
-    //           type="checkbox"
-    //           className="checkbox__container"
-    //         ></input>
-    //       </label>
-    //       <p className="checkbox__text">Я даю согласие на обработку персональных данных</p>
-    //     </div>
-    //   </form>
-    //   </div>
   );
 }
 

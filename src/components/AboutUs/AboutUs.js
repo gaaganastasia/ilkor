@@ -1,7 +1,5 @@
 import React from "react";
 import "./AboutUs.css";
-// import aboutImg1 from "../../images/about-us-1.png";
-// import aboutImg2 from "../../images/about-us-2.png";
 
 function AboutUs() {
   return (
@@ -10,14 +8,6 @@ function AboutUs() {
     <div className="about-us__content">
       <p className="about-us__subtitle">Мы, компания <span className="about-us__company">«iLKoR»</span>, занимаемся привлечением клиентов в Ваш бизнес: находим точки роста бизнеса в интернете.
 На рынке с 2020 года. За это время получили опыт сотрудничества с различными бизнесами.</p>
-      {/* <div className="about-us__numbers">
-        <p className="about-us__number">15</p>
-        <p className="about-us__number">10</p>
-        <p className="about-us__number">1</p>
-        <p className="about-us__caption">Проектов реализованно</p>
-        <p className="about-us__caption">Человек в команде</p>
-        <p className="about-us__caption">год на рынке digital</p>
-      </div> */}
       <div className="about-us__numbers">
         <div className="about-us__number-container">
           <p className="about-us__number">15</p>

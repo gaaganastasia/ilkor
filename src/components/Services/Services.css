@@ -241,9 +241,50 @@
 }
 
 
+@media screen and (min-width: 1279px) and (max-width: 1599px) {
+  .services {
+    width: 1180px;
+    margin: 50px auto 160px;
+  }
+  
+  .ReactCollapse--collapse {
+    max-width: 849px;
+  }
+  
+  .services__subtitle {
+    max-width: 875px;
+  }
+  
+  .services__content {
+    width: 874px;
+  }
+  
+  .service__description {
+    max-width: 455px;
+  }
+  
+  .service__stages {
+    width: 849px;
+  }
+  
+  .stage__time {
+    left: 390px;
+  }
+  
+  .service__last {
+    height: 153px;
+  }
+  
+  .service___time {
+    left: 390px;
+  }
+  
+  .service__order-btn {
+    right: 0;
+  }
+}
 
-
-@media screen and (min-width: 744px) and (max-width: 1599px) {
+@media screen and (min-width: 744px) and (max-width: 1279px) {
   .services {
     width: 714px;
     margin: 50px auto 150px;

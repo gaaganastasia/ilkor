@@ -3,12 +3,6 @@ import "./Services.css";
 import {Collapse} from 'react-collapse';
 
 function Services(props) {
-
-  // const [isAdOpened, setAdState] = React.useState(false);
-  // const changeAdState = () => {
-  // setAdState(!isAdOpened);
-  // };
-
   const height = 'auto';
 
   return (
@@ -35,12 +29,12 @@ function Services(props) {
               </div>
               <div className="service__stage stage">
                 <p className="stage__title">Разработка ТЗ</p>
-                <p className="stage__time">1 день</p>
+                <p className="stage__time">4 дня</p>
                 <button type="button" className="stage__more-btn"></button>
               </div>
               <div className="service__stage stage">
                 <p className="stage__title">прототипирование</p>
-                <p className="stage__time">2 дня</p>
+                <p className="stage__time">3 дня</p>
                 <button type="button" className="stage__more-btn"></button>
               </div>
               <div className="service__stage stage">
@@ -50,7 +44,7 @@ function Services(props) {
               </div>
               <div className="service__stage stage">
                 <p className="stage__title">Адаптивы</p>
-                <p className="stage__time">2 дня</p>
+                <p className="stage__time">3 дня</p>
                 <button type="button" className="stage__more-btn"></button>
               </div>
               <div className="service__stage stage">
@@ -59,7 +53,7 @@ function Services(props) {
                 <button type="button" className="stage__more-btn"></button>
               </div>
               <div className="service__last">
-                <p className="service___time">17 дней</p>
+                <p className="service___time">22 дня</p>
                 <button type="button" className="service__order-btn">Заказать</button>
               </div>
             </div>

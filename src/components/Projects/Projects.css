@@ -3,6 +3,7 @@
   margin: 50px auto 170px;
   display: flex;
   justify-content: space-between;
+  scroll-behavior: smooth;
 }
 
 .projects__title {
@@ -90,7 +91,26 @@
   margin: 2px 0 0;
 }
 
-@media screen and (min-width: 744px) and (max-width: 1599px) {
+@media screen and (min-width: 1279px) and (max-width: 1599px) {
+  .projects {
+    width: 1180px;
+    margin: 50px auto 160px;
+  }
+  
+  .projects__content {
+    grid-template-columns: repeat(2, 420px);
+    grid-template-rows: 516px;
+    gap: 35px;
+  }
+  
+  .projects__project {
+    width: 370px;
+    height: 456px;
+    padding: 30px;
+  }
+}
+
+@media screen and (min-width: 744px) and (max-width: 1279px) {
   .projects {
     width: 714px;
     margin: 50px auto 150px;
