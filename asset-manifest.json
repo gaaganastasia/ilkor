@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/ilkor/static/css/main.18400525.css",
-    "main.js": "/ilkor/static/js/main.60572615.js",
-    "static/media/main-background.png": "/ilkor/static/media/main-background.c10c0e6c97f9718a2f5a.png",
+    "main.css": "/ilkor/static/css/main.c5aef49c.css",
+    "main.js": "/ilkor/static/js/main.7bd1e2d8.js",
+    "static/media/timeline.mp4": "/ilkor/static/media/timeline.18720f3fcd30a5fcf685.mp4",
     "static/media/proj-eco.png": "/ilkor/static/media/proj-eco.3602ae7a673a840d9e16.png",
     "static/media/proj-covorking.png": "/ilkor/static/media/proj-covorking.dc4d913d2b24536accff.png",
     "static/media/proj-unibit.png": "/ilkor/static/media/proj-unibit.2a2a2df5007bc496754d.png",
@@ -57,11 +57,11 @@
     "static/media/checkbox-active.svg": "/ilkor/static/media/checkbox-active.0702eedf30b67531ffa3.svg",
     "static/media/start-proj-btn-back.svg": "/ilkor/static/media/start-proj-btn-back.2b7743dd796ff9f4bf0b.svg",
     "static/media/order-btn-back.svg": "/ilkor/static/media/order-btn-back.108f7fed168369bf15e0.svg",
-    "main.18400525.css.map": "/ilkor/static/css/main.18400525.css.map",
-    "main.60572615.js.map": "/ilkor/static/js/main.60572615.js.map"
+    "main.c5aef49c.css.map": "/ilkor/static/css/main.c5aef49c.css.map",
+    "main.7bd1e2d8.js.map": "/ilkor/static/js/main.7bd1e2d8.js.map"
   },
   "entrypoints": [
-    "static/css/main.18400525.css",
-    "static/js/main.60572615.js"
+    "static/css/main.c5aef49c.css",
+    "static/js/main.7bd1e2d8.js"
   ]
 }
