@@ -2,6 +2,7 @@
   display: none;
   position: relative;
   width: 100vw;
+  z-index: 3;
 }
 
 .nav__close-btn {
@@ -18,6 +19,7 @@
   right: 23px;
   cursor: pointer;
   transition: .3s;
+  
 }
 
 .nav__close-btn:hover {

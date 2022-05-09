@@ -1,0 +1,25 @@
+.preloader {
+  background: #0E0E0E;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+.preloader__content {
+  width: 220px;
+  position: absolute;
+  top: calc((100vh - 115px)/2);
+  left: calc((100vw - 220px)/2);
+}
+
+.preloader__logo {
+  width: 220px;
+  height: 63px;
+}
+
+.preloader__indicator {
+  width: 100%;
+  margin: 40px 0 0;
+  height: 8px;
+  background-color: #fff;
+}

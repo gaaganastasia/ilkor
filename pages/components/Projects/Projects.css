@@ -1,0 +1,175 @@
+.projects {
+  width: 1400px;
+  margin: 50px auto 170px;
+  display: flex;
+  justify-content: space-between;
+  scroll-behavior: smooth;
+}
+
+.projects__link {
+  text-decoration: none;
+}
+
+.projects__title {
+  font-family: 'Neutral Face';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 150%;
+  /* identical to box height, or 60px */
+  
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.projects__content {
+  display: grid;
+  grid-template-columns: repeat(2, 500px);
+  grid-template-rows: 576px;
+  gap: 39px;
+}
+
+.projects__project {
+  background-color: #0E0E0E;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 440px;
+  height: 516px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+  transition: ease-in-out .3s;
+}
+
+.projects__project:hover {
+  /* opacity: .8; */
+  transform: scale(1.035, 1.035);
+}
+
+.projects__project_ecodom {
+  background-image: url(../../images/proj-eco.png);
+}
+
+.projects__project_alas {
+  background-image: url(../../images/proj-alas.png);
+}
+
+.projects__project_unibit {
+  background-image: url(../../images/proj-unibit.png);
+}
+
+.projects__project_covorking {
+  background-image: url(../../images/proj-covorking.png);
+}
+
+.projects__name {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 150%;
+  /* identical to box height, or 39px */
+  
+  
+  color: #FFFFFF;
+  
+  opacity: 0.8;
+  margin: 0;
+}
+
+.projects__description {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  /* identical to box height, or 27px */
+  
+  
+  color: #FFFFFF;
+  
+  opacity: 0.8;
+  margin: 2px 0 0;
+}
+
+@media screen and (min-width: 1279px) and (max-width: 1599px) {
+  .projects {
+    width: 1180px;
+    margin: 50px auto 160px;
+  }
+  
+  .projects__content {
+    grid-template-columns: repeat(2, 420px);
+    grid-template-rows: 516px;
+    gap: 35px;
+  }
+  
+  .projects__project {
+    width: 370px;
+    height: 456px;
+    padding: 30px;
+  }
+}
+
+@media screen and (min-width: 744px) and (max-width: 1279px) {
+  .projects {
+    width: 714px;
+    margin: 50px auto 150px;
+    flex-direction: column;
+  }
+
+  .projects__title {
+    margin: 0 0 40px;
+  }
+
+  .projects__content {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, 576px);
+    gap: 30px;
+  }
+
+  .projects__project {
+    width: 654px;
+  }
+}
+
+
+@media screen and (min-width: 375px) and (max-width: 744px) {
+  .projects {
+    width: 344px;
+    margin: 40px auto 120px;
+    flex-direction: column;
+  }
+
+  .projects__title {
+    margin: 0 0 58px;
+    font-size: 20px;
+  }
+
+  .projects__content {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, 286px);
+    gap: 30px;
+  }
+
+  .projects__project {
+    width: 304px;
+    height: 246px;
+    padding: 20px;
+  }
+
+  .projects__name {
+    font-size: 20px;
+  }
+  
+  .projects__description {
+    font-size: 14px;
+  }
+}

@@ -8,7 +8,78 @@
 
 .first {
   width: 100%;
-  background-image: url(../../images/main-background.png);
+  position: relative;
+  height: 884px;
+  /* background-image: url(../../images/main-background.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+}
+
+.first__overlay {
+  position: absolute;
+  width: 100%;
+  height: 884px;
+  background-color: rgba(0, 0, 0, .45);
+  top: 0;
+  left: 0;
+  
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.first__video {
+  position: absolute;
+  width: 100%;
+  height: 884px;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+}
+
+@media screen and (min-width: 1279px) and (max-width: 1599px) {
+  .first {
+    height: 853px;
+  }
+  
+  .first__overlay {
+    height: 853px;
+  }
+  
+  .first__video {
+    height: 853px;
+  }
+}
+
+@media screen and (min-width: 744px) and (max-width: 1279px) {
+  .first {
+    height: 914px;
+  }
+  
+  .first__overlay {
+    height: 914px;
+  }
+  
+  .first__video {
+    height: 914px;
+  }
+}
+
+
+@media screen and (min-width: 375px) and (max-width: 744px) {
+  .first {
+    height: 661px;
+  }
+  
+  .first__overlay {
+    height: 661px;
+  }
+  
+  .first__video {
+    height: 661px;
+  }
 }

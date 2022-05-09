@@ -52,8 +52,14 @@ function App() {
   return (
     <div className="page">
       <div className="first">
+        <div className="first__overlay"></div>
+        <video className="first__video" src={require('../../images/timeline.mp4')}
+            muted
+            autoPlay={"autoplay"}
+            preLoad="auto"
+            loop>
+        </video>
         <Header changeNavState={changeNavState}></Header>
-        <Line></Line>
         <Main changeFormState={changeFormState}></Main>
       </div>
       <Line></Line>
