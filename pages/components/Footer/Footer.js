@@ -16,7 +16,7 @@ function Footer() {
       <div className="footer__links">
         <a className="footer__link" href="https://t.me/kir354" target="_blank">Telegram</a>
         <a className="footer__link" href="https://vk.com/id647668431" target="_blank">VKontakte</a>
-        <a className="footer__link" href="#" target="_blank">Instagram</a>
+        <a className="footer__link" href="https://instagram.com/_il.krtkv_?igshid=YmMyMTA2M2Y=" target="_blank">Instagram</a>
       </div>
       <p className="footer__up" onClick={scrollToTop}>Наверх</p>
     </footer>
