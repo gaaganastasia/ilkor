@@ -1,6 +1,20 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
+  "/components/AboutUs/AboutUs": "pages/components/AboutUs/AboutUs.html",
+  "/components/App/App": "pages/components/App/App.html",
+  "/components/Footer/Footer": "pages/components/Footer/Footer.html",
+  "/components/Form/Form": "pages/components/Form/Form.html",
+  "/components/Header/Header": "pages/components/Header/Header.html",
+  "/components/Line/Line": "pages/components/Line/Line.html",
+  "/components/Main/Main": "pages/components/Main/Main.html",
+  "/components/Marquee/Marquee": "pages/components/Marquee/Marquee.html",
+  "/components/Navigation/Navigation": "pages/components/Navigation/Navigation.html",
+  "/components/Preloader/Preloader": "pages/components/Preloader/Preloader.html",
+  "/components/Projects/Projects": "pages/components/Projects/Projects.html",
+  "/components/Services/Services": "pages/components/Services/Services.html",
+  "/components/StartProject/StartProject": "pages/components/StartProject/StartProject.html",
+  "/": "pages/index.html",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js"
+  "/404": "pages/404.html"
 }

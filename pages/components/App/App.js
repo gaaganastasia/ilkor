@@ -82,7 +82,8 @@ function App() {
           isDesignOpen={isDesignOpen}
           changeDesignState={changeDesignState}
           isAdOpen={isAdOpen}
-          changeAdState={changeAdState}>
+          changeAdState={changeAdState}
+          changeFormState={changeFormState}>
         </Services>
       </Fade>
 

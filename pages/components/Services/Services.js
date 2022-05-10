@@ -54,7 +54,7 @@ function Services(props) {
               </div>
               <div className="service__last">
                 <p className="service___time">22 дня</p>
-                <button type="button" className="service__order-btn">Заказать</button>
+                <button type="button" className="service__order-btn" onClick={props.changeFormState}>Заказать</button>
               </div>
             </div>
           </Collapse>
@@ -96,7 +96,7 @@ function Services(props) {
               </div>
               <div className="service__last">
                 <p className="service___time">8 дней</p>
-                <button type="button" className="service__order-btn">Заказать</button>
+                <button type="button" className="service__order-btn" onClick={props.changeFormState}>Заказать</button>
               </div>
             </div>
           </Collapse>
@@ -143,7 +143,7 @@ function Services(props) {
               </div>
               <div className="service__last">
                 <p className="service___time">15 дней</p>
-                <button type="button" className="service__order-btn">Заказать</button>
+                <button type="button" className="service__order-btn" onClick={props.changeFormState}>Заказать</button>
               </div>
             </div>
           </Collapse>
@@ -180,7 +180,7 @@ function Services(props) {
               </div>
               <div className="service__last">
                 <p className="service___time">6 дней</p>
-                <button type="button" className="service__order-btn">Заказать</button>
+                <button type="button" className="service__order-btn" onClick={props.changeFormState}>Заказать</button>
               </div>
             </div>
           </Collapse>
