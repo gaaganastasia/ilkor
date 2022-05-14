@@ -347,9 +347,9 @@
 }
 
 
-@media screen and (min-width: 375px) and (max-width: 744px) {
+@media screen and (min-width: 320px) and (max-width: 744px) {
   .services {
-    width: 344px;
+    width: 290px;
     margin: 40px auto 120px;
   }
 
@@ -363,12 +363,12 @@
   }
 
   .services__subtitle {
-    font-size: 24px;
-    max-width: 714px;
+    font-size: 22px;
+    max-width: 290px;
   }
 
   .services__content {
-    width: 344px;
+    width: 290px;
   }
 
   .service {
@@ -377,18 +377,18 @@
 
   .service__more-btn {
     top: 30px;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
   }
 
   .service__title {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .service__description {
     font-size: 16px;
     margin: 30px 0 50px;
-    max-width: 344px;
+    max-width: 290px;
   }
 
   .service__stages {
@@ -417,7 +417,7 @@
   
   .service___time {
     top: 45px;
-    left: 104px;
+    left: 100px;
   }
   
   .service__order-btn {

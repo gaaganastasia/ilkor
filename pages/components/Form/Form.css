@@ -281,9 +281,9 @@
   }
 }
 
-@media screen and (min-width: 375px) and (max-width: 744px) {
+@media screen and (min-width: 320px) and (max-width: 744px) {
   .form__header {
-    width: 312px;
+    width: 300px;
     padding: 38px 0 28px;
   }
   
@@ -297,14 +297,14 @@
   }
   
   .form__form {
-    width: 312px;
+    width: 300px;
     margin: 45px auto 30px;
   }
   
   .form__layer {
     top: calc(50vh - 290px);
-    left: calc(50vw - 170px);
-    width: 340px;
+    left: calc(50vw - 155px);
+    width: 310px;
     height: 580px;
   }
   

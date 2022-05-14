@@ -12,7 +12,7 @@ function Footer() {
 
   return (
     <footer className="footer">
-      <Image className="footer__logo" alt="Логотип" src={logo}></Image>
+      <Image layout="fixed" width="124" height="35" className="footer__logo" alt="Логотип" src={logo}></Image>
       <div className="footer__links">
         <a className="footer__link" href="https://t.me/kir354" target="_blank">Telegram</a>
         <a className="footer__link" href="https://vk.com/id647668431" target="_blank">VKontakte</a>

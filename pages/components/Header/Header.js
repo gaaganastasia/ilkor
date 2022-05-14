@@ -8,7 +8,7 @@ function Header(props) {
 
   return (
     <header className="header" id="header">
-      <Image src={logo} alt="Логотип" className="header__logo"></Image>
+      <Image layout="fixed" width="83" height="23" src={logo} alt="Логотип" className="header__logo"></Image>
       <div className="header__links">
         <Link to="about-us" className="header__link" spy={true} smooth={true} duration={500}>
           О нас

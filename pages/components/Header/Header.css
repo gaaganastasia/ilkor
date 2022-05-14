@@ -79,12 +79,12 @@
 }
 
 
-@media screen and (min-width: 375px) and (max-width: 744px) {
+@media screen and (min-width: 320px) and (max-width: 744px) {
   .header {
-    width: 344px;
+    width: 290px;
     padding: 20px 0;
     top: 0;
-    left: calc((100% - 344px)/2);
+    left: calc((100% - 290px)/2);
   }
   
   .header__menu {
