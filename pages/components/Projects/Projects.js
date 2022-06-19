@@ -22,7 +22,7 @@ function Projects() {
         </div>
       </a>
 
-      <a href="" target="_blank" className="projects__link">
+      <a href="https://unibit.vercel.app/" target="_blank" className="projects__link">
         <div className="projects__project projects__project_unibit">
           <div className="projects__img"></div>
           <p className="projects__name">UniBit</p>
@@ -30,10 +30,10 @@ function Projects() {
         </div>
       </a>
 
-      <a href="" target="_blank" className="projects__link">
+      <a href="https://movies-explorer-frontend-orpin.vercel.app/signin" target="_blank" className="projects__link">
         <div className="projects__project projects__project_covorking">
           <div className="projects__img"></div>
-          <p className="projects__name">Covorking</p>
+          <p className="projects__name">Movies</p>
           <p className="projects__description">Cайт</p>
         </div>
       </a>

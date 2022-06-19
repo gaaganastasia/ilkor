@@ -72,7 +72,7 @@ function Projects() {
                         })
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
-                        href: "",
+                        href: "https://unibit.vercel.app/",
                         target: "_blank",
                         className: "projects__link",
                         children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
@@ -93,7 +93,7 @@ function Projects() {
                         })
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
-                        href: "",
+                        href: "https://movies-explorer-frontend-orpin.vercel.app/signin",
                         target: "_blank",
                         className: "projects__link",
                         children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
@@ -104,7 +104,7 @@ function Projects() {
                                 }),
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
                                     className: "projects__name",
-                                    children: "Covorking"
+                                    children: "Movies"
                                 }),
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
                                     className: "projects__description",
