@@ -50,7 +50,9 @@ function App() {
   };
 
   return (
+    
     <div className="page">
+
       <div className="first">
         <div className="first__overlay"></div>
         <video className="first__video" src={require('../../images/timeline.mp4')}

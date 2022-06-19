@@ -7,6 +7,7 @@ export default function MyApp({ Component, pageProps }) {
 
   return (
     <>
+      <noscript><div><img src="https://mc.yandex.ru/watch/89240992" style={{position:'absolute', left:'-9999px'}} alt="" /></div></noscript>
       <NextSeo
         title="ILKOR"
         description="продающий сайт для вашего бизнеса"></NextSeo>
