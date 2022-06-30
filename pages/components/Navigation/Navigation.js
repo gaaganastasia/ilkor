@@ -1,6 +1,6 @@
 import React from "react";
 // import "./Navigation.module.css";
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from "react-scroll";
+import { Link } from "react-scroll";
 
 function Navigation(props) {
   return (

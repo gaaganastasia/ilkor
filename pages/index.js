@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 // import './index.css';
 import App from './components/App/App';
 import Head from 'next/head';
+import Script from 'next/script';
 
 export default class extends Component {
   render () {
@@ -12,7 +13,7 @@ export default class extends Component {
         <Head>
           <link rel="shortcut icon" href="../static/favicon.ico" />
 
-          <script
+          <Script
             dangerouslySetInnerHTML={{
               __html: `
               (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; 

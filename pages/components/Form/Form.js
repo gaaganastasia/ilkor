@@ -1,13 +1,32 @@
 import React from "react";
-// import "./Form.module.css";
-//import emailjs from '@emailjs/browser';
-import validator from "../Validator/Validator";
-// import isEmail from 'validator/lib/isEmail';
-// import isMobilePhone from 'validator/lib/isMobilePhone';
+//import validator from "../Validator/Validator";
 
 
 function Form(props) {
-  const { values, handleChange, isValid, resetForm } = validator();
+  function useFormWithValidation() {
+    const [values, setValues] = React.useState({});
+    const [isValid, setIsValid] = React.useState(false);
+  
+    const handleChange = (event) => {
+      const target = event.target;
+      const name = target.name;
+      const value = target.value;
+      setValues({ ...values, [name]: value });
+      setIsValid(target.closest("form").checkValidity());
+      
+    };
+  
+    const resetForm = React.useCallback(
+      (newValues = {}, newIsValid = false) => {
+        setValues(newValues);
+        setIsValid(newIsValid);
+      },
+      [setValues, setIsValid]
+    );
+  
+    return { values, handleChange, isValid, resetForm };
+  }
+  const { values, handleChange, isValid, resetForm } = useFormWithValidation();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -19,62 +38,6 @@ function Form(props) {
     props.onSendRequest(values.name, values.phone, values.email, values.task, e, resetForm);
   }
 
-  // function resetForm(e) {
-  //   console.log(e.target.closest("form"))
-  // }
-
-  /*const [name, setName] = React.useState("");
-
-  function handleChangeName(e) {
-    setName(e.target.value);
-  }
-
-  const [phone, setPhone] = React.useState("");
-
-  function handleChangePhone(e) {
-    setPhone(e.target.value);
-  }
-
-  const [email, setEmail] = React.useState("");
-
-  function handleChangeEmail(e) {
-    setEmail(e.target.value);
-  }
-
-  const [task, setTask] = React.useState("");
-
-  function handleChangeTask(e) {
-    setTask(e.target.value);
-  }
-
-  const resetValues = () => {
-    setName('');
-    setPhone('');
-    setEmail('');
-    setTask('');
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault(); // Prevents default refresh by the browser
-
-    emailjs.send("service_w4t946h", "template_q1u48ep", {name: name,
-      phone: phone,
-      email: email,
-      task: task,}, "rx91W3rrGPqIyRlSn")
-       .then((result) => {
-         console.log("Message Sent, We will get back to you shortly", result.text);
-         resetForm(e);
-         props.changeCheckboxState();
-       }, (error) => {
-         console.log("An error occurred, Please try again", error.text);
-       });
-  };*/
-
-  // const resetForm = (e) => {
-  //   props.changeState();
-  //   // e.target.reset();
-  //   resetValues();
-  // } 
 
   const reset = (e) => {
     props.changeState();
@@ -173,8 +136,8 @@ function Form(props) {
               Отправить заявку
             </button>
 
-            <span className={`form__message form__message_ok ${(props.message.length !== 0) ? `form__message_visible` : ``}`}>{props.message}</span>
-            <span className={`form__message form__message_err ${(props.message.length !== 0) ? `form__message_visible` : ``}`}>{props.error}</span>
+            <span className={`form__message form__message_ok ${(props.message && props.message.length !== 0) ? `form__message_visible` : ``}`}>{props.message}</span>
+            <span className={`form__message form__message_err ${(props.message && props.message.length !== 0) ? `form__message_visible` : ``}`}>{props.error}</span>
           </form>
       
     </div>

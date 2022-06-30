@@ -14,9 +14,9 @@ function Footer() {
     <footer className="footer">
       <Image layout="fixed" width="124" height="35" className="footer__logo" alt="Логотип" src={logo}></Image>
       <div className="footer__links">
-        <a className="footer__link" href="https://t.me/kir354" target="_blank">Telegram</a>
-        <a className="footer__link" href="https://vk.com/id647668431" target="_blank">VKontakte</a>
-        <a className="footer__link" href="https://instagram.com/_il.krtkv_?igshid=YmMyMTA2M2Y=" target="_blank">Instagram</a>
+        <a className="footer__link" href="https://t.me/kir354" target="_blank" rel="noreferrer">Telegram</a>
+        <a className="footer__link" href="https://vk.com/id647668431" target="_blank" rel="noreferrer">VKontakte</a>
+        <a className="footer__link" href="https://instagram.com/_il.krtkv_?igshid=YmMyMTA2M2Y=" target="_blank" rel="noreferrer">Instagram</a>
       </div>
       <p className="footer__up" onClick={scrollToTop}>Наверх</p>
     </footer>
