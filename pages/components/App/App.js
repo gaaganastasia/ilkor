@@ -12,7 +12,93 @@ import Navigation from "../Navigation/Navigation";
 import Form from "../Form/Form";
 import Fade from 'react-reveal/Fade';
 
+import emailjs from '@emailjs/browser';
+import isEmail from 'validator/lib/isEmail';
+import isMobilePhone from 'validator/lib/isMobilePhone';
+
 function App() {
+  const [error, setError] = React.useState("");
+
+  const [isFormDisabled, setIsFormDisabled] = React.useState(false);
+
+  const [message, setMessage] = React.useState('');
+
+  const [checkboxState, setCheckboxState] = React.useState(false);
+
+  function handleCheckboxState() {
+    setCheckboxState(!checkboxState);
+  }
+
+
+  function handleSendRequest(name, phone, email, task, e, resetForm) {
+    setError("");
+    setMessage('');
+    setIsFormDisabled(true);
+
+    if (!isMobilePhone(phone)) {
+      setError("Ошибка: некорректный номер телефона.")
+      e.target.reset();
+      resetForm();
+      handleCheckboxState()
+
+    } else if (!isEmail(email)) {
+      setError("Ошибка: некорректный адрес электронной почты.")
+      e.target.reset();
+      resetForm();
+      handleCheckboxState()
+    } else {
+      //setMessage('Данные отправлены успешно!');
+      // resetForm();
+      // handleCheckboxState()
+
+      emailjs.send("service_w4t946h", "template_q1u48ep", {name: name,
+        phone: phone,
+        email: email,
+        task: task,}, "rx91W3rrGPqIyRlSn")
+         .then((result) => {
+            setMessage('Данные отправлены успешно!');
+         }, (error) => {
+           console.log(error)
+         })
+         .catch((err) => {
+          console.log(err)
+         })
+         .finally(() => {
+            setIsFormDisabled(false);
+            resetForm();
+            handleCheckboxState()
+         })
+         ;
+    }
+      
+    
+
+    /*mainApi
+      .authorize(email, password)
+      .then((res) => {
+        if (res.token) {
+          setLoggedIn(true);
+          history.push("/movies");
+          setError("");
+          setIsErrorVisible(false);
+        }
+        return res;
+      })
+      .catch((err) => {
+        setError("Вы ввели неправильный логин или пароль.");
+        setIsErrorVisible(true);
+        return err;
+      })
+      .finally(() => {
+        setIsFormDisabled(false);
+      })*/
+  }
+
+
+
+
+
+  /////////////////////////////////////////////////////////////////
 
   const [isNavOpen, setNavState] = React.useState(false);
   const changeNavState = () => {
@@ -24,10 +110,10 @@ function App() {
   setFormState(!isFormOpen);
   };
 
-  const [isCheckboxActive, setCheckboxState] = React.useState(false);
-  const changeCheckboxState = () => {
-    setCheckboxState(!isCheckboxActive);
-  };
+  // const [isCheckboxActive, setCheckboxState] = React.useState(false);
+  // const changeCheckboxState = () => {
+  //   setCheckboxState(!isCheckboxActive);
+  // };
 
   const [isDevOpen, setDevState] = React.useState(false);
   const changeDevState = () => {
@@ -104,8 +190,14 @@ function App() {
       <Form
         isOpen={isFormOpen}
         changeState={changeFormState}
-        changeCheckboxState={changeCheckboxState}
-        isCheckboxActive={isCheckboxActive}
+        error={error}
+        message={message}
+        isFormDisabled={isFormDisabled}
+        onSendRequest={handleSendRequest}
+        checkboxState={checkboxState}
+        onSendCheckboxState={handleCheckboxState}
+        setError={setError}
+        setMessage={setMessage}
       ></Form>
     </div>
   );
